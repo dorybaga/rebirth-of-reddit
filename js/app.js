@@ -36,20 +36,24 @@ function reqListener(){
 
     var userNameBox = document.createElement("div");
     userNameBox.className = "username";
-    console.log(res.data.children[i].data.author);
+    // console.log(res.data.children[i].data.author);
     userNameBox.innerHTML = res.data.children[i].data.author;
     subtitleBox.appendChild(userNameBox);
 
     var dateBox = document.createElement("div");
     dateBox.className = "date";
+    var timeStamp = res.data.children[i].data.created;
+    // dateBox.innerHTML =
     subtitleBox.appendChild(dateBox);
 
     var numViews = document.createElement("div");
     numViews.className = "views";
+    numViews.innerHTML = res.data.children[i].data.score;
     subtitleBox.appendChild(numViews);
 
     var textBox = document.createElement("div");
     textBox.className = "text";
+    // textBox.innerHTML =
     boardBox.appendChild(textBox);
 
   }
