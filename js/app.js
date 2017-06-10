@@ -20,8 +20,10 @@ function reqListener(){
     boardBox.className = "board";
     main.appendChild(boardBox);
 
-    var imgBox = document.createElement("div");
+    var imgBox = document.createElement("img");
     imgBox.className = "img";
+    // console.log(res.data.children[i].data.url);
+    imgBox.src = res.data.children[i].data.url;
     boardBox.appendChild(imgBox);
 
     var titleBox = document.createElement("div");
