@@ -8,11 +8,11 @@ var rReq = new XMLHttpRequest();
 
 function reqListener(){
   var res = JSON.parse(this.responseText);
-  console.log(res);
-  console.log(res.data);
-  console.log(res.data.children);
-  console.log(res.data.children[0]);
-  console.log(res.data.children.length);
+  // console.log(res);
+  // console.log(res.data);
+  // console.log(res.data.children);
+  // console.log(res.data.children[0]);
+  // console.log(res.data.children.length);
 
   for (var i = 0; i < res.data.children.length; i++){
     // console.log(res.data.children[i]);
@@ -26,6 +26,8 @@ function reqListener(){
 
     var titleBox = document.createElement("div");
     titleBox.className = "title";
+    console.log(res.data.children[i].data.title);
+    titleBox.innerHTML = res.data.children[i].data.title;
     boardBox.appendChild(titleBox);
 
     var subtitleBox = document.createElement("div");
