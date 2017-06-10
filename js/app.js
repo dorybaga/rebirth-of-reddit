@@ -26,7 +26,7 @@ function reqListener(){
 
     var titleBox = document.createElement("div");
     titleBox.className = "title";
-    console.log(res.data.children[i].data.title);
+    // console.log(res.data.children[i].data.title);
     titleBox.innerHTML = res.data.children[i].data.title;
     boardBox.appendChild(titleBox);
 
@@ -36,6 +36,8 @@ function reqListener(){
 
     var userNameBox = document.createElement("div");
     userNameBox.className = "username";
+    console.log(res.data.children[i].data.author);
+    userNameBox.innerHTML = res.data.children[i].data.author;
     subtitleBox.appendChild(userNameBox);
 
     var dateBox = document.createElement("div");
