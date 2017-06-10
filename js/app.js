@@ -16,6 +16,7 @@ function reqListener(){
 
   for (var i = 0; i < res.data.children.length; i++){
     // console.log(res.data.children[i]);
+
     var boardBox = document.createElement("div");
     boardBox.className = "board";
     main.appendChild(boardBox);
@@ -26,31 +27,35 @@ function reqListener(){
     imgBox.src = res.data.children[i].data.url;
     boardBox.appendChild(imgBox);
 
-    var titleBox = document.createElement("div");
+    var titleBox = document.createElement("h3");
     titleBox.className = "title";
     // console.log(res.data.children[i].data.title);
     titleBox.innerHTML = res.data.children[i].data.title;
     boardBox.appendChild(titleBox);
 
-    var subtitleBox = document.createElement("div");
+    var subtitleBox = document.createElement("h4");
     subtitleBox.className = "subtitle";
     boardBox.appendChild(subtitleBox);
 
     var userNameBox = document.createElement("div");
     userNameBox.className = "username";
     // console.log(res.data.children[i].data.author);
-    userNameBox.innerHTML = res.data.children[i].data.author;
+    userNameBox.innerHTML = "by: " + res.data.children[i].data.author;
     subtitleBox.appendChild(userNameBox);
 
     var dateBox = document.createElement("div");
     dateBox.className = "date";
-    var timeStamp = res.data.children[i].data.created;
-    // dateBox.innerHTML =
+    // console.log(res.data.children[i].data.created);
+    var timeStamp = new Date(res.data.children[i].data.created * 1000);
+    // console.log(timeStamp);
+    var hours = timeStamp.getHours();
+    // console.log(hours);
+    dateBox.innerHTML = hours + " hours ago";
     subtitleBox.appendChild(dateBox);
 
     var numViews = document.createElement("div");
     numViews.className = "views";
-    numViews.innerHTML = res.data.children[i].data.score;
+    numViews.innerHTML = res.data.children[i].data.score + " views";
     subtitleBox.appendChild(numViews);
 
     var textBox = document.createElement("div");
