@@ -24,10 +24,10 @@ header {
 }
 
 main {
- font-family: 'Lato', sans-serif;
+ font-family: 'Oswald', sans-serif;
  display: flex;
- align-content: center;
- flex-wrap: wrap;
-
-
+ justify-content: flex-start;
+ flex-flow: row wrap;
+ margin: 0 auto;
+ max-width: 800px;
 }

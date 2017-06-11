@@ -1,8 +1,11 @@
 .board {
+  display: block;
+  margin: 1rem 0.5rem;
+  text-align: center;
   background-color: white;
-  height: 500px;
-  width: 400px;
-  padding: 10px; }
+  height: 400px;
+  width: 325px;
+  padding: 25px; }
 
 body {
   background-image: url("/assets/bg.jpg"); }
@@ -18,7 +21,9 @@ header {
   background-repeat: no-repeat; }
 
 main {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   display: flex;
-  align-content: center;
-  flex-wrap: wrap; }
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 800px; }

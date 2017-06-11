@@ -27,7 +27,7 @@ function reqListener(){
       // console.log(res.data.children[i].data);
       imgBox.src = res.data.children[i].data.url;
       imgBox.height = "200";
-      imgBox.width = "300";
+      imgBox.width = "325";
       boardBox.appendChild(imgBox);
 
       var titleBox = document.createElement("h3");
