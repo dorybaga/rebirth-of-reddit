@@ -2,7 +2,7 @@
 
 var rReq = new XMLHttpRequest();
   rReq.addEventListener('load', reqListener);
-  rReq.open('GET', `https://www.reddit.com/r/aww/.json`);
+  rReq.open('GET', `https://www.reddit.com/r/travel.json`);
   rReq.send();
 
 
@@ -11,12 +11,23 @@ function reqListener(){
   // console.log(res);
   // console.log(res.data);
   // console.log(res.data.children);
-  // console.log(res.data.children[0]);
+  console.log(res.data.children[0]);
+  console.log(res.data.children[0].kind);
   // console.log(res.data.children.length);
 
-  for (var i = 0; i < res.data.children.length; i++){
+  // if(res.data.children.data.url !== null){
+
+
+
+  // }
+
+  for (var i = 1; i < res.data.children.length; i++){
     // console.log(res.data.children[i]);
 
+
+    // if (res.data.children[i].kind === t3){
+    //   if (res.data.children[i].)
+    // }
     var boardBox = document.createElement("div");
     boardBox.className = "board";
     main.appendChild(boardBox);
@@ -60,7 +71,8 @@ function reqListener(){
 
     var textBox = document.createElement("div");
     textBox.className = "text";
-    // textBox.innerHTML =
+    console.log(res.data.children[i].data.selftext);
+    textBox.innerHTML = res.data.children[i].data.selftext;
     boardBox.appendChild(textBox);
 
   }
