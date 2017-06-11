@@ -1,3 +1,7 @@
+.board {
+  border-style: hidden;
+  color: white; }
+
 body {
   background-image: url("/assets/bg.jpg"); }
 
@@ -8,7 +12,3 @@ header {
 
 main {
   font-family: 'Lato', sans-serif; }
-
-.board {
-  border-style: hidden;
-  color: white; }

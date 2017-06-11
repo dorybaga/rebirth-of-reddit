@@ -1,4 +1,4 @@
-// @import: "partials/card";
+@import "partials/card";
 
 body {
  background-image: url("/assets/bg.jpg");
@@ -17,11 +17,5 @@ header {
 
 main {
  font-family: 'Lato', sans-serif;
-
-}
-
-.board{
-  border-style: hidden;
-  color: white;
 
 }
