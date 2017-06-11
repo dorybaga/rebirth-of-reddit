@@ -1,0 +1,14 @@
+body {
+  background-image: url("/assets/bg.jpg"); }
+
+header {
+  background-color: white;
+  background-image: url("/assets/header_bg.svg");
+  background-repeat: no-repeat; }
+
+main {
+  font-family: 'Lato', sans-serif; }
+
+.board {
+  border-style: hidden;
+  color: white; }
